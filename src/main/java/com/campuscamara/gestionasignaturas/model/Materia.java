@@ -3,7 +3,7 @@ package com.campuscamara.gestionasignaturas.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "asignaturas") // <--- ¡OJO! Aquí conectamos con tu tabla antigua
+@Table(name = "asignaturas") 
 public class Materia {
 
     @Id

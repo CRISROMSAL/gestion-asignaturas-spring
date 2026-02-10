@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/materias") // <--- Esta será la URL base
+@RequestMapping("/api/materias") // URL base
 public class MateriaController {
 
     @Autowired

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "criterios_evaluacion") // Nombre confirmado por tu captura
+@Table(name = "criterios_evaluacion") 
 public class Ce {
 
     @Id
@@ -16,7 +16,7 @@ public class Ce {
 
     // --- RELACIÓN CON RA (Muchos Criterios -> Un RA) ---
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ra_id") // <--- CONFIRMADO EN CAPTURA
+    @JoinColumn(name = "ra_id") 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
     private Ra ra;
 

@@ -16,7 +16,7 @@ public class Ra {
 
     // --- RELACIÓN CON MATERIA ---
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "asignatura_id") // <--- ¡CORREGIDO! Según tu captura es así.
+    @JoinColumn(name = "asignatura_id") 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
     private Materia materia;
 

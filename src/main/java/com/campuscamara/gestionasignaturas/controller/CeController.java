@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/ces") // <--- URL Base: /api/ces
+@RequestMapping("/api/ces") // URL Base: /api/ces
 public class CeController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class CeController {
         return ceService.listarTodos();
     }
 
-    // 2. VER CRITERIOS DE UN RA ESPECÍFICO (Ej: /api/ces/ra/1)
+    // 2. VER CRITERIOS DE UN RA ESPECÍFICO 
     @GetMapping("/ra/{idRa}")
     public List<Ce> getByRa(@PathVariable Integer idRa) {
         return ceService.buscarPorRa(idRa);

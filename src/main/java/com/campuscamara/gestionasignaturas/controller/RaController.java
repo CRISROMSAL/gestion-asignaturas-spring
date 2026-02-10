@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/ras") // <--- URL Base para los RAs
+@RequestMapping("/api/ras") //URL Base para los RAs
 public class RaController {
 
     @Autowired
@@ -29,7 +29,7 @@ public class RaController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // 3. OBTENER RAs DE UNA ASIGNATURA (Ej: /api/ras/materia/1)
+    // 3. OBTENER RAs DE UNA ASIGNATURA 
     @GetMapping("/materia/{idMateria}")
     public List<Ra> getByMateria(@PathVariable Integer idMateria) {
         return raService.buscarPorMateria(idMateria);
